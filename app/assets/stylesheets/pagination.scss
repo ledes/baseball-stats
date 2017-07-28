@@ -1,0 +1,25 @@
+@import "constants";
+
+.pagination-component {
+  justify-content: flex-end;
+  display: flex;
+  margin: 0px 80px;
+  height: 40px;
+
+
+  .page-item .page-link {
+    color: $gray;
+    border-color: $gray-light;
+    width: 80px;
+  }
+  .page-item.active .page-link {
+    background-color: $red-sox;
+    border-color: $gray-light;
+    color: $white;
+    width: 38px;
+  }
+  .page-item.disabled .page-link{
+    border-color: $white;
+    color: $gray-light;
+  }
+}

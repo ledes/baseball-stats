@@ -1,0 +1,2 @@
+class Hitter < Player
+end

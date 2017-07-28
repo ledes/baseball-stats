@@ -1,0 +1,36 @@
+@import "constants";
+
+#statisticsApp {
+  background: $gray-lighter;
+  .nav {
+    display: flex;
+    margin: 0px 80px;
+    .title {
+      width: 85%;
+      min-width: 350px;
+      h1 {
+        color: $gray;
+      }
+    }
+    .season-selector {
+      margin-top: 30px;
+      display: flex;
+      justify-content: flex-end;
+      width: 20%;
+      align-items: center;
+      h5 {
+        padding-top: 3px;
+        font-weight: 600;
+        color: $red-sox;
+      }
+      select {
+        border-color: $gray-light;
+        margin-top: 6px;
+        margin-left: 5px;
+        width: 80px;
+        height: 30px;
+        outline: none;
+      }
+    }
+  }
+}

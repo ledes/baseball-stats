@@ -1,0 +1,75 @@
+@import 'constants';
+
+.sortable-table.table {
+  padding: 20px 80px 40px 80px;
+
+  @include table-rounded-body($table-border-radius);
+  @include table-bordered-body($table-border-body);
+
+  td {
+    background: $white;
+    padding: 10px;
+    max-width: 300px;
+    .fa-user-circle {
+      padding-right: 5px;
+    }
+  }
+  tr td {
+    border-right-color: $gray-lighter;
+    &:last-of-type {
+      border-right-color: $gray-light;
+    }
+  }
+
+  tr:hover td {
+    background-color: $blue-light;
+  }
+
+  th {
+    border: none;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    color: $gray;
+    padding: 4px;
+    color: $red-sox;
+
+    .sortable-table-icon.glyphicon {
+      width: 0;
+    }
+  }
+  th.sorted-asc {
+    cursor: pointer;
+    .sortable-table-icon.glyphicon:before {
+      content: "\e155";
+      color: $gray;
+    }
+  }
+  th.sorted-desc {
+    cursor: pointer;
+    .sortable-table-icon.glyphicon:before {
+      content: "\e156";
+      color: $gray;
+    }
+  }
+
+  th.non-numeric{
+    max-width: 20%;
+    min-width: 10%;
+    width: 15%;
+  }
+
+  th.numeric {
+    max-width: 10%;
+    min-width: 5%;
+    width: 8%;
+  }
+
+  th.sortable:hover {
+    cursor: pointer;
+    .sortable-table-icon.glyphicon:before {
+      content: "\e155";
+      color: $gray-light;
+    }
+  }
+}
